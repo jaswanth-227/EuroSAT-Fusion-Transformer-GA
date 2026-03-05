@@ -1,4 +1,6 @@
 ## Multi-Scale Feature Fusion and Transformer Encoding for EuroSAT Land Use Classification
+## 📄 Conference Paper
+[View the Full Paper](EuroSAT_Conference.pdf)
 
 This repository contains the implementation of our research work presented in the ICAIATI Conference.  
 The project focuses on **Land Use and Land Cover (LULC) classification using satellite imagery from the EuroSAT dataset**.
