@@ -96,27 +96,19 @@ The proposed framework combines **deep learning and optimization techniques** to
 
 ---
 
-## Pipeline Flow
+## Pipeline Overview
 
-Input Image  
-↓  
-DenseNet-121 Feature Extraction  
-↓  
-Attention Blocks  
-↓  
-Feature Alignment and Projection  
-↓  
-Adaptive Gated Fusion  
-↓  
-Transformer Encoder  
-↓  
-Global Average Pooling  
-↓  
-Feature Concatenation  
-↓  
-Genetic Algorithm Feature Selection  
-↓  
-Final Classifier  
+| Stage | Description |
+|------|-------------|
+| Input | Satellite image from EuroSAT dataset |
+| Feature Extraction | DenseNet-121 extracts multi-scale features |
+| Attention | Channel and spatial attention refine features |
+| Feature Alignment | 1×1 convolution aligns feature maps |
+| Fusion | Adaptive gated fusion combines features |
+| Context Modeling | Transformer encoder captures global dependencies |
+| Pooling | Global average pooling reduces dimensionality |
+| Feature Optimization | Genetic algorithm selects optimal features |
+| Classification | Logistic Regression / SVM / Random Forest |
 
 ---
 
