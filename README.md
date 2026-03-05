@@ -1,4 +1,4 @@
-**Multi-Scale Feature Fusion and Transformer Encoding for EuroSAT Land Use Classification**
+**Multi-Scale Feature Fusion and Transformer Encoding for EuroSAT Land Use Classification**\n
 This repository contains the implementation of our research work presented in the ICAIATI Conference. The project focuses on Land Use and Land Cover (LULC) classification using satellite imagery from the EuroSAT dataset.
 The proposed system introduces a hybrid deep learning framework that integrates convolutional neural networks, attention mechanisms, transformer-based contextual modeling, and genetic algorithm–based feature selection to achieve high accuracy classification of satellite images.
 
