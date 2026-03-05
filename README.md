@@ -95,6 +95,11 @@ The proposed framework combines **deep learning and optimization techniques** to
   - Random Forest
 
 ---
+## Model Architecture
+
+The following diagram illustrates the overall architecture of the proposed hybrid framework integrating DenseNet feature extraction, attention-based fusion, transformer encoding, and genetic algorithm feature selection.
+
+![Model Architecture](ARCHITECTURE.png)
 
 ## Pipeline Overview
 
