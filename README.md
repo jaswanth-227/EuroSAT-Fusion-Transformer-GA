@@ -1,8 +1,8 @@
-**Multi-Scale Feature Fusion and Transformer Encoding for EuroSAT Land Use Classification**\n
+##Multi-Scale Feature Fusion and Transformer Encoding for EuroSAT Land Use Classification
 This repository contains the implementation of our research work presented in the ICAIATI Conference. The project focuses on Land Use and Land Cover (LULC) classification using satellite imagery from the EuroSAT dataset.
 The proposed system introduces a hybrid deep learning framework that integrates convolutional neural networks, attention mechanisms, transformer-based contextual modeling, and genetic algorithm–based feature selection to achieve high accuracy classification of satellite images.
 
-**Problem Statement**
+##Problem Statement
 Land Use and Land Cover classification from satellite imagery is essential for many real-world applications such as environmental monitoring, urban planning, agricultural assessment, and climate analysis.
 
 However, accurate classification remains challenging due to:
@@ -12,7 +12,7 @@ High-dimensional feature representations
 Complex spatial patterns in remote sensing data
 To address these challenges, this project proposes a multi-scale hybrid architecture combining CNNs, attention modules, transformers, and evolutionary feature optimization.
 
-**Dataset**
+##Dataset
 
 The project uses the EuroSAT dataset, derived from Sentinel-2 satellite imagery.
 Dataset characteristics:
@@ -31,7 +31,7 @@ Residential
 River
 SeaLake
 
-**Proposed Methodology**
+##Proposed Methodology
 
 The proposed framework combines deep learning and optimization techniques to improve classification performance.
 Main components of the pipeline:
@@ -42,7 +42,7 @@ Transformer encoder to capture long-range spatial dependencies
 Genetic Algorithm for feature selection and dimensionality reduction
 Final classification using machine learning models such as Logistic Regression, SVM, and Random Forest
 
-Pipeline flow:
+##Pipeline flow:
 Input Image
 → DenseNet-121 Feature Extraction
 → Attention Blocks
@@ -54,7 +54,7 @@ Input Image
 → Genetic Algorithm Feature Selection
 → Final Classifier
 
-**Experimental Setup**
+##Experimental Setup
 Dataset split used for experiments:
 Training set: 70%
 Validation set: 15%
@@ -67,7 +67,7 @@ EfficientNet-B0
 MobileNet-V2
 AlexNet
 
-**Results**
+3#Results
 
 Performance comparison of models on the EuroSAT dataset:
 ResNet-50 — 95.90%
@@ -78,7 +78,7 @@ AlexNet — 91.95%
 Proposed Fusion + Transformer + Genetic Algorithm Model — 97.36%
 The proposed hybrid model achieves the highest classification accuracy by effectively combining multi-scale feature extraction, attention-based refinement, and contextual modeling.
 
-**Key Contributions**
+##Key Contributions
 
 Multi-scale feature extraction using DenseNet architecture
 Attention-based refinement for improved spatial-spectral representation
