@@ -71,11 +71,6 @@ https://www.kaggle.com/datasets/raoofnaushad/eurosat-sentinel2-dataset
 - River
 - SeaLake
 
-After downloading the dataset, place it in the following directory:
-
-dataset/
-└── EuroSAT/
-
 ---
 
 ## Proposed Methodology
