@@ -9,74 +9,75 @@
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red?style=for-the-badge&logo=pytorch)
 ![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
-![Research](https://img.shields.io/badge/Conference-ICAIATI%202025-success?style=for-the-badge)
-![Publication](https://img.shields.io/badge/Publication-Taylor%20%26%20Francis-blueviolet?style=for-the-badge)
+![Conference](https://img.shields.io/badge/ICAIATI-2025-success?style=for-the-badge)
+![Publication](https://img.shields.io/badge/Taylor%20%26%20Francis-Accepted-blueviolet?style=for-the-badge)
 ![Accuracy](https://img.shields.io/badge/Test%20Accuracy-97.36%25-brightgreen?style=for-the-badge)
 
 </p>
 
-<p align="center">
+---
 
-📄 **Conference Paper:** [EuroSAT_Conference.pdf](EuroSAT_Conference.pdf)
+## 🏆 Research Highlights
 
-📂 **Dataset:** https://www.kaggle.com/datasets/raoofnaushad/eurosat-sentinel2-dataset
+- 🥇 **Best Paper Award** — ICAIATI 2025
+- 📄 Accepted for publication in **Taylor & Francis**
+- 🚀 Achieved **97.36% Test Accuracy** on EuroSAT
+- 🛰️ Proposed a novel **Multi-Level Feature Fusion Transformer (MLFT)** framework
+- 🧬 Genetic Algorithm based Feature Selection
+- 🤖 Transformer-based Contextual Learning
 
-🏆 **Best Paper Award – ICAIATI 2025**
+---
 
-</p>
+## 📄 Resources
+
+📑 **Conference Paper**
+
+➡️ [EuroSAT_Conference.pdf](EuroSAT_Conference.pdf)
+
+📐 **Complete Architecture**
+
+➡️ [ARCHITECTURE.pdf](ARCHITECTURE.pdf)
+
+📂 **Dataset**
+
+https://www.kaggle.com/datasets/raoofnaushad/eurosat-sentinel2-dataset
 
 ---
 
 # 📖 Overview
 
-This repository contains the official implementation of our **award-winning research** on **Land Use and Land Cover (LULC) Classification** using satellite imagery from the **EuroSAT** benchmark dataset.
+Land Use and Land Cover (LULC) classification plays a crucial role in environmental monitoring, precision agriculture, urban planning, disaster management, and remote sensing applications.
 
-The proposed framework introduces a **Multi-Level Feature Fusion Transformer (MLFT)** architecture that combines convolutional feature extraction, attention mechanisms, transformer-based contextual modeling, and genetic algorithm optimization to significantly improve classification performance.
+This repository presents the implementation of our proposed **Multi-Level Feature Fusion Transformer (MLFT)** architecture, which combines multi-scale convolutional feature extraction, attention mechanisms, transformer encoding, and evolutionary feature optimization to improve satellite image classification.
 
-Our proposed approach achieved **97.36% Test Accuracy**, outperforming several state-of-the-art CNN architectures.
-
----
-
-# ✨ Highlights
-
-- 🥇 **Best Paper Award – ICAIATI 2025**
-- 📄 Accepted for publication in **Taylor & Francis**
-- 🚀 **97.36% Test Accuracy**
-- 🛰️ Multi-Level Feature Fusion Framework
-- 🎯 Channel & Spatial Attention
-- 🤖 Transformer-based Global Context Learning
-- 🧬 Genetic Algorithm Feature Selection
-- 🌍 Evaluated on the EuroSAT Benchmark Dataset
+The proposed framework achieved a **97.36% test accuracy**, outperforming several state-of-the-art CNN architectures on the EuroSAT benchmark dataset.
 
 ---
 
 # 🎯 Applications
 
-The proposed framework can be applied in:
-
 - 🌾 Precision Agriculture
-- 🌍 Environmental Monitoring
 - 🏙 Urban Planning
-- 🌲 Forest Monitoring
-- 🌊 Water Resource Mapping
-- 🚨 Disaster Management
-- 🛰 Remote Sensing Analytics
+- 🌍 Land Cover Mapping
+- 🌳 Environmental Monitoring
+- 🌊 Water Resource Analysis
+- 🚨 Disaster Assessment
+- 🛰 Remote Sensing
 
 ---
 
 # 📂 Dataset
 
-This work uses the **EuroSAT RGB Dataset**, derived from **Sentinel-2 satellite imagery**.
+**EuroSAT RGB Dataset**
 
-| Attribute | Value |
-|-----------|-------|
-| Dataset | EuroSAT RGB |
+| Property | Value |
+|----------|-------|
 | Images | 27,000 |
 | Classes | 10 |
 | Resolution | 64 × 64 |
 | Satellite | Sentinel-2 |
 
-### Land Use Classes
+### Classes
 
 - AnnualCrop
 - Forest
@@ -91,37 +92,33 @@ This work uses the **EuroSAT RGB Dataset**, derived from **Sentinel-2 satellite 
 
 ---
 
-# 🏗️ Proposed Architecture
+# 🏗 Proposed Architecture
 
-The proposed **MLFT architecture** integrates CNN-based feature extraction with attention mechanisms, transformer encoding, and evolutionary optimization.
+The proposed **MLFT** architecture integrates DenseNet feature extraction, attention-based refinement, transformer encoding, and genetic algorithm optimization.
 
 <p align="center">
-<img src="images/architecture.png" width="1000">
+<img src="architecture_diagram.svg" width="1000">
 </p>
 
 <p align="center">
-<b>Figure.</b> Overall architecture of the proposed Multi-Level Feature Fusion Transformer (MLFT).
+<b>Figure.</b> Proposed Multi-Level Feature Fusion Transformer (MLFT) Architecture.
 </p>
 
 ---
 
-# ⚙️ Methodology
+# ⚙ Methodology
 
 ```text
 Satellite Image
         │
         ▼
 DenseNet-121
-Multi-Level Feature Extraction
         │
         ▼
-Channel Attention Block
+Channel Attention
         │
         ▼
-Spatial Attention Block
-        │
-        ▼
-Feature Alignment
+Spatial Attention
         │
         ▼
 Adaptive Gated Fusion
@@ -134,32 +131,31 @@ Global Average Pooling
         │
         ▼
 Genetic Algorithm
-Feature Selection
         │
         ▼
 Logistic Regression
         │
         ▼
-Predicted Land Use Class
+Land Use Prediction
 ```
 
 ---
 
 # 🧠 Model Components
 
-| Component | Purpose |
-|------------|----------|
+| Module | Purpose |
+|---------|---------|
 | DenseNet-121 | Multi-scale Feature Extraction |
-| Channel Attention | Channel-wise Feature Refinement |
+| Channel Attention | Channel Refinement |
 | Spatial Attention | Spatial Feature Enhancement |
 | Adaptive Gated Fusion | Multi-Level Feature Fusion |
-| Transformer Encoder | Long-range Context Modeling |
-| Genetic Algorithm | Optimal Feature Selection |
+| Transformer Encoder | Global Context Modeling |
+| Genetic Algorithm | Feature Selection |
 | Logistic Regression | Final Classification |
 
 ---
 
-# ⚙️ Experimental Setup
+# ⚙ Experimental Setup
 
 | Parameter | Value |
 |-----------|-------|
@@ -168,19 +164,18 @@ Predicted Land Use Class
 | Testing | 15% |
 | Dataset | EuroSAT RGB |
 | Image Size | 64 × 64 |
-| Optimizer | Adam |
 
 ---
 
 # 📊 Performance Comparison
 
 | Model | Test Accuracy |
-|----------------------|-------------:|
+|------|-------------:|
 | AlexNet | 91.95% |
-| MobileNet-V2 | 93.88% |
+| MobileNetV2 | 93.88% |
 | EfficientNet-B0 | 95.73% |
-| ResNet-50 | 95.90% |
-| DenseNet-121 | 96.77% |
+| ResNet50 | 95.90% |
+| DenseNet121 | 96.77% |
 | ⭐ Proposed MLFT | **97.36%** |
 
 ---
@@ -188,37 +183,11 @@ Predicted Land Use Class
 # 📈 Ablation Study
 
 | Configuration | Test Accuracy |
-|-------------------------------|-------------:|
+|---------------|-------------:|
 | DenseNet-121 | 96.77% |
 | DenseNet + Transformer | 96.92% |
-| DenseNet + Feature Fusion + Transformer | 97.10% |
+| DenseNet + Fusion + Transformer | 97.10% |
 | ⭐ MLFT + Genetic Algorithm | **97.36%** |
-
----
-
-# 📷 Experimental Results
-
-## Confusion Matrix
-
-<p align="center">
-<img src="images/confusion_matrix.png" width="600">
-</p>
-
----
-
-## Attention Maps
-
-<p align="center">
-<img src="images/attention_maps.png" width="850">
-</p>
-
----
-
-## Feature Visualization (Optional)
-
-<p align="center">
-<img src="images/tsne.png" width="700">
-</p>
 
 ---
 
@@ -227,64 +196,22 @@ Predicted Land Use Class
 ```text
 EuroSAT-LULC-Classification
 │
-├── dataset/
-├── models/
-├── notebooks/
-├── images/
-│   ├── architecture.png
-│   ├── confusion_matrix.png
-│   ├── attention_maps.png
-│   └── tsne.png
-│
-├── results/
+├── README.md
 ├── EuroSAT_Conference.pdf
-├── requirements.txt
-├── train.py
-├── test.py
-└── README.md
+├── ARCHITECTURE.pdf
+├── architecture_diagram.svg
+└── OIML_CT_1.ipynb
 ```
 
 ---
 
-# 🚀 Installation
+# 📒 Notebook
 
-Clone the repository
+The implementation of the proposed framework is available in
 
-```bash
-git clone https://github.com/jaswanth-227/EuroSAT-LULC-Classification.git
-
-cd EuroSAT-LULC-Classification
 ```
-
-Install dependencies
-
-```bash
-pip install -r requirements.txt
+OIML_CT_1.ipynb
 ```
-
----
-
-# ▶ Usage
-
-Train the model
-
-```bash
-python train.py
-```
-
-Evaluate the model
-
-```bash
-python test.py
-```
-
----
-
-# 📄 Conference Paper
-
-Read the complete paper:
-
-📄 **EuroSAT_Conference.pdf**
 
 ---
 
@@ -292,11 +219,11 @@ Read the complete paper:
 
 - Vision Transformers (ViT)
 - Swin Transformers
-- Multi-Spectral EuroSAT Classification
-- Explainable AI using Grad-CAM
 - Self-Supervised Learning
-- Real-Time Satellite Analytics
-- Lightweight Edge Deployment
+- Explainable AI (Grad-CAM)
+- Lightweight Deployment
+- Multi-Spectral Sentinel-2 Processing
+- Real-Time Remote Sensing Applications
 
 ---
 
@@ -304,17 +231,15 @@ Read the complete paper:
 
 **Jaswanth Yadurla**
 
-B.Tech – Artificial Intelligence & Machine Learning
+B.Tech — Artificial Intelligence & Machine Learning
 
-📧 **yadurlajaswanth@gmail.com**
+📧 yadurlajaswanth@gmail.com
 
-🔗 **LinkedIn:** https://www.linkedin.com/in/jaswanth-yadurla-634290284/
+🔗 LinkedIn: https://www.linkedin.com/in/jaswanth-yadurla-634290284/
 
 ---
 
 # 📚 Citation
-
-If you use this work, please cite:
 
 ```bibtex
 @inproceedings{yadurla2025mlft,
@@ -339,7 +264,7 @@ If you use this work, please cite:
 
 <p align="center">
 
-⭐ **If you find this repository useful, please consider giving it a Star!**
+⭐ If you found this work useful, please consider giving the repository a Star.
 
 Made with ❤️ by **Jaswanth Yadurla**
 
