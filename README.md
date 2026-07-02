@@ -34,9 +34,6 @@
 
 ➡️ [EuroSAT_Conference.pdf](EuroSAT_Conference.pdf)
 
-📐 **Complete Architecture**
-
-➡️ [ARCHITECTURE.pdf](ARCHITECTURE.pdf)
 
 📂 **Dataset**
 
