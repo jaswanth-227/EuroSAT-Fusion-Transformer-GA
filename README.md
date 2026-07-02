@@ -160,7 +160,7 @@ Land Use Prediction
 | Validation | 15% |
 | Testing | 15% |
 | Dataset | EuroSAT RGB |
-| Image Size | 64 × 64 |
+
 
 ---
 
