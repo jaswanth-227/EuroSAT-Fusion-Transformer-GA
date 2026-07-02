@@ -1,0 +1,567 @@
+<svg width="1000" height="1670" viewBox="0 0 1000 1670" xmlns="http://www.w3.org/2000/svg" font-family="'Segoe UI', Arial, Helvetica, sans-serif">
+
+<defs>
+  <linearGradient id="gradBlue" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#EAF3FD"/><stop offset="100%" stop-color="#BEDAF7"/>
+  </linearGradient>
+  <linearGradient id="gradGreen" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E8F7EC"/><stop offset="100%" stop-color="#BFE6CC"/>
+  </linearGradient>
+  <linearGradient id="gradTeal" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#E1F5F3"/><stop offset="100%" stop-color="#B7E4DE"/>
+  </linearGradient>
+  <linearGradient id="gradOrange" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FDF0E0"/><stop offset="100%" stop-color="#F8D2A0"/>
+  </linearGradient>
+  <linearGradient id="gradPurple" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#F0E9FB"/><stop offset="100%" stop-color="#D6C2F0"/>
+  </linearGradient>
+  <linearGradient id="gradGray" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#FBFCFD"/><stop offset="100%" stop-color="#EEF1F4"/>
+  </linearGradient>
+
+  <filter id="softShadow" x="-30%" y="-30%" width="160%" height="160%">
+    <feDropShadow dx="0" dy="2" stdDeviation="2.2" flood-color="#1F2937" flood-opacity="0.18"/>
+  </filter>
+
+  <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6.5" markerHeight="6.5" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#4B5563"/>
+  </marker>
+  <marker id="arrowP" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#7C4FCB"/>
+  </marker>
+  <marker id="arrowSmall" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+    <path d="M0,0 L10,5 L0,10 z" fill="#374151"/>
+  </marker>
+
+  <style>
+    .title{font-family:Georgia,'Times New Roman',serif;font-weight:700;fill:#1F2937;}
+    .caption{font-style:italic;fill:#4B5563;}
+    .sectionLabel{font-weight:700;fill:#374151;}
+    .modTitle{font-weight:700;fill:#1F2937;}
+    .modSub{fill:#4B5563;}
+    .tiny{fill:#374151;}
+    .flow{stroke:#4B5563;stroke-width:1.6;fill:none;marker-end:url(#arrow);}
+    .flowP{stroke:#7C4FCB;stroke-width:1.6;fill:none;marker-end:url(#arrowP);}
+    .flowSmall{stroke:#374151;stroke-width:1;fill:none;marker-end:url(#arrowSmall);}
+    .box{stroke-width:1.5;}
+  </style>
+</defs>
+
+<!-- BACKGROUND -->
+<rect x="0" y="0" width="1000" height="1670" fill="#FFFFFF"/>
+
+<!-- ============ TITLE ============ -->
+<text x="500" y="27" text-anchor="middle" class="title" font-size="21">Multi-Level Feature Fusion and Transformer Encoding</text>
+<text x="500" y="51" text-anchor="middle" class="title" font-size="21">Framework for Land Use Classification</text>
+
+<!-- ============ INPUT ============ -->
+<rect x="395" y="75" width="210" height="44" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+<rect x="404" y="83" width="26" height="26" rx="4" fill="#DDEBFA" stroke="#4A7FC1" stroke-width="1"/>
+<circle cx="412" cy="90" r="2.6" fill="#F4B400"/>
+<path d="M406,105 L414,95 L420,101 L424,96 L428,105 Z" fill="#6FA8DC"/>
+<text x="440" y="94" font-size="10.5" font-weight="600" fill="#1F3A5F">Satellite RGB Image</text>
+<text x="440" y="107" font-size="10" fill="#3B5C8A">(64 × 64 × 3)</text>
+<path d="M500,119 L500,148" class="flow"/>
+
+<!-- ============ BACKBONE CONTAINER ============ -->
+<rect x="35" y="150" width="930" height="196" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="52" y="173" class="sectionLabel" font-size="14.5">DenseNet-121 Backbone Network</text>
+
+<!-- Lane 1 -->
+<g>
+  <rect x="55" y="183" width="200" height="90" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <text x="155" y="201" text-anchor="middle" class="modTitle" font-size="12">Dense Block 1</text>
+  <text x="155" y="213" text-anchor="middle" class="modSub" font-size="8.5">(Dense Connectivity)</text>
+  <g stroke="#2F5FA3" stroke-width="1" fill="none">
+    <path d="M85,246 Q100,232 115,246"/><path d="M85,246 Q123,222 155,246"/><path d="M85,246 Q150,214 195,246"/>
+    <path d="M115,246 Q135,232 155,246"/><path d="M115,246 Q160,222 195,246"/><path d="M155,246 Q175,232 195,246"/>
+  </g>
+  <circle cx="85" cy="246" r="4" fill="#2F5FA3"/><circle cx="115" cy="246" r="4" fill="#2F5FA3"/>
+  <circle cx="155" cy="246" r="4" fill="#2F5FA3"/><circle cx="195" cy="246" r="4" fill="#2F5FA3"/>
+  <text x="155" y="264" text-anchor="middle" font-size="8" fill="#3B5C8A">×6 Conv Layers, k=32</text>
+  <path d="M155,273 L155,283" class="flowSmall"/>
+  <rect x="85" y="283" width="140" height="34" rx="8" fill="url(#gradTeal)" stroke="#3F9B8C"/>
+  <text x="155" y="299" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1D4D45">Feature Map 1</text>
+  <text x="155" y="311" text-anchor="middle" font-size="7.5" fill="#2C6E62">32×32×256</text>
+</g>
+
+<!-- Lane 2 -->
+<g>
+  <rect x="285" y="183" width="200" height="90" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <text x="385" y="201" text-anchor="middle" class="modTitle" font-size="12">Dense Block 2</text>
+  <text x="385" y="213" text-anchor="middle" class="modSub" font-size="8.5">(Dense Connectivity)</text>
+  <g stroke="#2F5FA3" stroke-width="1" fill="none">
+    <path d="M315,246 Q330,232 345,246"/><path d="M315,246 Q353,222 385,246"/><path d="M315,246 Q380,214 425,246"/>
+    <path d="M345,246 Q365,232 385,246"/><path d="M345,246 Q390,222 425,246"/><path d="M385,246 Q405,232 425,246"/>
+  </g>
+  <circle cx="315" cy="246" r="4" fill="#2F5FA3"/><circle cx="345" cy="246" r="4" fill="#2F5FA3"/>
+  <circle cx="385" cy="246" r="4" fill="#2F5FA3"/><circle cx="425" cy="246" r="4" fill="#2F5FA3"/>
+  <text x="385" y="264" text-anchor="middle" font-size="8" fill="#3B5C8A">×12 Conv Layers, k=32</text>
+  <path d="M385,273 L385,283" class="flowSmall"/>
+  <rect x="315" y="283" width="140" height="34" rx="8" fill="url(#gradTeal)" stroke="#3F9B8C"/>
+  <text x="385" y="299" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1D4D45">Feature Map 2</text>
+  <text x="385" y="311" text-anchor="middle" font-size="7.5" fill="#2C6E62">16×16×512</text>
+</g>
+
+<!-- Lane 3 -->
+<g>
+  <rect x="515" y="183" width="200" height="90" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <text x="615" y="201" text-anchor="middle" class="modTitle" font-size="12">Dense Block 3</text>
+  <text x="615" y="213" text-anchor="middle" class="modSub" font-size="8.5">(Dense Connectivity)</text>
+  <g stroke="#2F5FA3" stroke-width="1" fill="none">
+    <path d="M545,246 Q560,232 575,246"/><path d="M545,246 Q583,222 615,246"/><path d="M545,246 Q610,214 655,246"/>
+    <path d="M575,246 Q595,232 615,246"/><path d="M575,246 Q620,222 655,246"/><path d="M615,246 Q635,232 655,246"/>
+  </g>
+  <circle cx="545" cy="246" r="4" fill="#2F5FA3"/><circle cx="575" cy="246" r="4" fill="#2F5FA3"/>
+  <circle cx="615" cy="246" r="4" fill="#2F5FA3"/><circle cx="655" cy="246" r="4" fill="#2F5FA3"/>
+  <text x="615" y="264" text-anchor="middle" font-size="8" fill="#3B5C8A">×24 Conv Layers, k=32</text>
+  <path d="M615,273 L615,283" class="flowSmall"/>
+  <rect x="545" y="283" width="140" height="34" rx="8" fill="url(#gradTeal)" stroke="#3F9B8C"/>
+  <text x="615" y="299" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1D4D45">Feature Map 3</text>
+  <text x="615" y="311" text-anchor="middle" font-size="7.5" fill="#2C6E62">8×8×1024</text>
+</g>
+
+<!-- Lane 4 -->
+<g>
+  <rect x="745" y="183" width="200" height="90" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+  <text x="845" y="201" text-anchor="middle" class="modTitle" font-size="12">Dense Block 4</text>
+  <text x="845" y="213" text-anchor="middle" class="modSub" font-size="8.5">(Dense Connectivity)</text>
+  <g stroke="#2F5FA3" stroke-width="1" fill="none">
+    <path d="M775,246 Q790,232 805,246"/><path d="M775,246 Q813,222 845,246"/><path d="M775,246 Q840,214 885,246"/>
+    <path d="M805,246 Q825,232 845,246"/><path d="M805,246 Q850,222 885,246"/><path d="M845,246 Q865,232 885,246"/>
+  </g>
+  <circle cx="775" cy="246" r="4" fill="#2F5FA3"/><circle cx="805" cy="246" r="4" fill="#2F5FA3"/>
+  <circle cx="845" cy="246" r="4" fill="#2F5FA3"/><circle cx="885" cy="246" r="4" fill="#2F5FA3"/>
+  <text x="845" y="264" text-anchor="middle" font-size="8" fill="#3B5C8A">×16 Conv Layers, k=32</text>
+  <path d="M845,273 L845,283" class="flowSmall"/>
+  <rect x="775" y="283" width="140" height="34" rx="8" fill="url(#gradTeal)" stroke="#3F9B8C"/>
+  <text x="845" y="299" text-anchor="middle" font-size="9.5" font-weight="600" fill="#1D4D45">Feature Map 4</text>
+  <text x="845" y="311" text-anchor="middle" font-size="7.5" fill="#2C6E62">4×4×1024</text>
+</g>
+
+<!-- arrows into attention -->
+<path d="M155,317 L155,352" class="flow"/>
+<path d="M385,317 L385,352" class="flow"/>
+<path d="M615,317 L615,352" class="flow"/>
+<path d="M845,317 L845,352" class="flow"/>
+
+<!-- ============ ATTENTION CONTAINER ============ -->
+<rect x="35" y="350" width="930" height="186" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="52" y="373" class="sectionLabel" font-size="14.5">Attention Refinement — applied to each feature map</text>
+
+<!-- reusable attention lanes -->
+<!-- Lane 1 attention -->
+<g>
+  <rect x="55" y="383" width="200" height="68" rx="10" class="box" fill="url(#gradGreen)" stroke="#3F9B5C" filter="url(#softShadow)"/>
+  <text x="155" y="397" text-anchor="middle" font-size="10" font-weight="700" fill="#1E5B34">Channel Attention (CAM)</text>
+  <g font-size="6.3" fill="#1E5B34" text-anchor="middle">
+    <circle cx="70" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="70" y="426.5">GAP</text>
+    <rect x="94" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="104" y="426.5">FC</text>
+    <rect x="128" y="418" width="26" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="141" y="426.5">ReLU</text>
+    <rect x="168" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="178" y="426.5">FC</text>
+    <circle cx="207" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="207" y="426.5">σ</text>
+    <circle cx="238" cy="424" r="7" fill="#B7E0C4" stroke="#1E5B34"/><text x="238" y="426.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1E5B34">
+    <path d="M78,424 L93,424"/><path d="M114,424 L127,424"/><path d="M155,424 L167,424"/>
+    <path d="M189,424 L199,424"/><path d="M215,424 L230,424"/>
+  </g>
+  <text x="155" y="444" text-anchor="middle" font-size="7" fill="#1E5B34">channel-wise multiplication with input</text>
+  <path d="M155,451 L155,459" class="flowSmall"/>
+
+  <rect x="55" y="459" width="200" height="68" rx="10" class="box" fill="url(#gradTeal)" stroke="#2C6E62" filter="url(#softShadow)"/>
+  <text x="155" y="473" text-anchor="middle" font-size="10" font-weight="700" fill="#1D4D45">Spatial Attention (SAM)</text>
+  <g font-size="6.2" fill="#1D4D45" text-anchor="middle">
+    <circle cx="68" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><circle cx="80" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/>
+    <text x="74" y="512" font-size="6">Avg/Max</text>
+    <rect x="104" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="121" y="502.5">Concat</text>
+    <rect x="152" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="169" y="502.5">7×7 Conv</text>
+    <circle cx="204" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><text x="204" y="502.5">σ</text>
+    <circle cx="234" cy="500" r="6.5" fill="#AFE0D6" stroke="#1D4D45"/><text x="234" y="502.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1D4D45">
+    <path d="M87,500 L103,500"/><path d="M138,500 L151,500"/><path d="M186,500 L197,500"/><path d="M211,500 L227,500"/>
+  </g>
+  <text x="155" y="521" text-anchor="middle" font-size="7" fill="#1D4D45">spatial-wise multiplication</text>
+</g>
+
+<!-- Lane 2 attention -->
+<g>
+  <rect x="285" y="383" width="200" height="68" rx="10" class="box" fill="url(#gradGreen)" stroke="#3F9B5C" filter="url(#softShadow)"/>
+  <text x="385" y="397" text-anchor="middle" font-size="10" font-weight="700" fill="#1E5B34">Channel Attention (CAM)</text>
+  <g font-size="6.3" fill="#1E5B34" text-anchor="middle">
+    <circle cx="300" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="300" y="426.5">GAP</text>
+    <rect x="324" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="334" y="426.5">FC</text>
+    <rect x="358" y="418" width="26" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="371" y="426.5">ReLU</text>
+    <rect x="398" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="408" y="426.5">FC</text>
+    <circle cx="437" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="437" y="426.5">σ</text>
+    <circle cx="468" cy="424" r="7" fill="#B7E0C4" stroke="#1E5B34"/><text x="468" y="426.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1E5B34">
+    <path d="M308,424 L323,424"/><path d="M344,424 L357,424"/><path d="M385,424 L397,424"/>
+    <path d="M419,424 L429,424"/><path d="M445,424 L460,424"/>
+  </g>
+  <text x="385" y="444" text-anchor="middle" font-size="7" fill="#1E5B34">channel-wise multiplication with input</text>
+  <path d="M385,451 L385,459" class="flowSmall"/>
+
+  <rect x="285" y="459" width="200" height="68" rx="10" class="box" fill="url(#gradTeal)" stroke="#2C6E62" filter="url(#softShadow)"/>
+  <text x="385" y="473" text-anchor="middle" font-size="10" font-weight="700" fill="#1D4D45">Spatial Attention (SAM)</text>
+  <g font-size="6.2" fill="#1D4D45" text-anchor="middle">
+    <circle cx="298" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><circle cx="310" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/>
+    <text x="304" y="512" font-size="6">Avg/Max</text>
+    <rect x="334" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="351" y="502.5">Concat</text>
+    <rect x="382" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="399" y="502.5">7×7 Conv</text>
+    <circle cx="434" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><text x="434" y="502.5">σ</text>
+    <circle cx="464" cy="500" r="6.5" fill="#AFE0D6" stroke="#1D4D45"/><text x="464" y="502.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1D4D45">
+    <path d="M317,500 L333,500"/><path d="M368,500 L381,500"/><path d="M416,500 L427,500"/><path d="M441,500 L457,500"/>
+  </g>
+  <text x="385" y="521" text-anchor="middle" font-size="7" fill="#1D4D45">spatial-wise multiplication</text>
+</g>
+
+<!-- Lane 3 attention -->
+<g>
+  <rect x="515" y="383" width="200" height="68" rx="10" class="box" fill="url(#gradGreen)" stroke="#3F9B5C" filter="url(#softShadow)"/>
+  <text x="615" y="397" text-anchor="middle" font-size="10" font-weight="700" fill="#1E5B34">Channel Attention (CAM)</text>
+  <g font-size="6.3" fill="#1E5B34" text-anchor="middle">
+    <circle cx="530" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="530" y="426.5">GAP</text>
+    <rect x="554" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="564" y="426.5">FC</text>
+    <rect x="588" y="418" width="26" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="601" y="426.5">ReLU</text>
+    <rect x="628" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="638" y="426.5">FC</text>
+    <circle cx="667" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="667" y="426.5">σ</text>
+    <circle cx="698" cy="424" r="7" fill="#B7E0C4" stroke="#1E5B34"/><text x="698" y="426.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1E5B34">
+    <path d="M538,424 L553,424"/><path d="M574,424 L587,424"/><path d="M615,424 L627,424"/>
+    <path d="M649,424 L659,424"/><path d="M675,424 L690,424"/>
+  </g>
+  <text x="615" y="444" text-anchor="middle" font-size="7" fill="#1E5B34">channel-wise multiplication with input</text>
+  <path d="M615,451 L615,459" class="flowSmall"/>
+
+  <rect x="515" y="459" width="200" height="68" rx="10" class="box" fill="url(#gradTeal)" stroke="#2C6E62" filter="url(#softShadow)"/>
+  <text x="615" y="473" text-anchor="middle" font-size="10" font-weight="700" fill="#1D4D45">Spatial Attention (SAM)</text>
+  <g font-size="6.2" fill="#1D4D45" text-anchor="middle">
+    <circle cx="528" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><circle cx="540" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/>
+    <text x="534" y="512" font-size="6">Avg/Max</text>
+    <rect x="564" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="581" y="502.5">Concat</text>
+    <rect x="612" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="629" y="502.5">7×7 Conv</text>
+    <circle cx="664" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><text x="664" y="502.5">σ</text>
+    <circle cx="694" cy="500" r="6.5" fill="#AFE0D6" stroke="#1D4D45"/><text x="694" y="502.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1D4D45">
+    <path d="M547,500 L563,500"/><path d="M598,500 L611,500"/><path d="M646,500 L657,500"/><path d="M671,500 L687,500"/>
+  </g>
+  <text x="615" y="521" text-anchor="middle" font-size="7" fill="#1D4D45">spatial-wise multiplication</text>
+</g>
+
+<!-- Lane 4 attention -->
+<g>
+  <rect x="745" y="383" width="200" height="68" rx="10" class="box" fill="url(#gradGreen)" stroke="#3F9B5C" filter="url(#softShadow)"/>
+  <text x="845" y="397" text-anchor="middle" font-size="10" font-weight="700" fill="#1E5B34">Channel Attention (CAM)</text>
+  <g font-size="6.3" fill="#1E5B34" text-anchor="middle">
+    <circle cx="760" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="760" y="426.5">GAP</text>
+    <rect x="784" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="794" y="426.5">FC</text>
+    <rect x="818" y="418" width="26" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="831" y="426.5">ReLU</text>
+    <rect x="858" y="418" width="20" height="12" rx="3" fill="#CDEAD6" stroke="#3F9B5C"/><text x="868" y="426.5">FC</text>
+    <circle cx="897" cy="424" r="7" fill="#CDEAD6" stroke="#3F9B5C"/><text x="897" y="426.5">σ</text>
+    <circle cx="928" cy="424" r="7" fill="#B7E0C4" stroke="#1E5B34"/><text x="928" y="426.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1E5B34">
+    <path d="M768,424 L783,424"/><path d="M804,424 L817,424"/><path d="M845,424 L857,424"/>
+    <path d="M879,424 L889,424"/><path d="M905,424 L920,424"/>
+  </g>
+  <text x="845" y="444" text-anchor="middle" font-size="7" fill="#1E5B34">channel-wise multiplication with input</text>
+  <path d="M845,451 L845,459" class="flowSmall"/>
+
+  <rect x="745" y="459" width="200" height="68" rx="10" class="box" fill="url(#gradTeal)" stroke="#2C6E62" filter="url(#softShadow)"/>
+  <text x="845" y="473" text-anchor="middle" font-size="10" font-weight="700" fill="#1D4D45">Spatial Attention (SAM)</text>
+  <g font-size="6.2" fill="#1D4D45" text-anchor="middle">
+    <circle cx="758" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><circle cx="770" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/>
+    <text x="764" y="512" font-size="6">Avg/Max</text>
+    <rect x="794" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="811" y="502.5">Concat</text>
+    <rect x="842" y="494" width="34" height="12" rx="3" fill="#CFEEE9" stroke="#2C6E62"/><text x="859" y="502.5">7×7 Conv</text>
+    <circle cx="894" cy="500" r="6.5" fill="#CFEEE9" stroke="#2C6E62"/><text x="894" y="502.5">σ</text>
+    <circle cx="924" cy="500" r="6.5" fill="#AFE0D6" stroke="#1D4D45"/><text x="924" y="502.5">⊗</text>
+  </g>
+  <g class="flowSmall" stroke="#1D4D45">
+    <path d="M777,500 L793,500"/><path d="M828,500 L841,500"/><path d="M876,500 L887,500"/><path d="M901,500 L917,500"/>
+  </g>
+  <text x="845" y="521" text-anchor="middle" font-size="7" fill="#1D4D45">spatial-wise multiplication</text>
+</g>
+
+<!-- arrows into alignment -->
+<path d="M155,527 L155,577" class="flow"/>
+<path d="M385,527 L385,577" class="flow"/>
+<path d="M615,527 L615,577" class="flow"/>
+<path d="M845,527 L845,577" class="flow"/>
+
+<!-- ============ FEATURE ALIGNMENT ============ -->
+<rect x="35" y="545" width="930" height="82" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="52" y="566" class="sectionLabel" font-size="14.5">Feature Alignment</text>
+
+<rect x="70" y="578" width="170" height="40" rx="8" class="box" fill="url(#gradOrange)" stroke="#E08E3E" filter="url(#softShadow)"/>
+<text x="155" y="593" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Bilinear Resize → H×W</text>
+<text x="155" y="606" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">1×1 Conv (Channel Proj.)</text>
+
+<rect x="300" y="578" width="170" height="40" rx="8" class="box" fill="url(#gradOrange)" stroke="#E08E3E" filter="url(#softShadow)"/>
+<text x="385" y="593" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Bilinear Resize → H×W</text>
+<text x="385" y="606" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">1×1 Conv (Channel Proj.)</text>
+
+<rect x="530" y="578" width="170" height="40" rx="8" class="box" fill="url(#gradOrange)" stroke="#E08E3E" filter="url(#softShadow)"/>
+<text x="615" y="593" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Bilinear Resize → H×W</text>
+<text x="615" y="606" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">1×1 Conv (Channel Proj.)</text>
+
+<rect x="760" y="578" width="170" height="40" rx="8" class="box" fill="url(#gradOrange)" stroke="#E08E3E" filter="url(#softShadow)"/>
+<text x="845" y="593" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">Bilinear Resize → H×W</text>
+<text x="845" y="606" text-anchor="middle" font-size="9" font-weight="600" fill="#7A431A">1×1 Conv (Channel Proj.)</text>
+
+<!-- converging arrows into fusion -->
+<path d="M155,618 C 155,645 400,650 495,668" class="flow"/>
+<path d="M385,618 C 385,640 460,650 495,666" class="flow"/>
+<path d="M615,618 C 615,640 540,650 505,666" class="flow"/>
+<path d="M845,618 C 845,645 600,650 505,668" class="flow"/>
+
+<!-- ============ FUSION ============ -->
+<rect x="230" y="635" width="540" height="182" rx="16" fill="url(#gradOrange)" fill-opacity="0.35" stroke="#E08E3E" stroke-width="1.5" filter="url(#softShadow)"/>
+<text x="252" y="658" font-size="14.5" font-weight="700" fill="#7A431A">Adaptive Gated Feature Fusion</text>
+
+<rect x="150" y="668" width="18" height="18" rx="3" fill="#BEDAF7" stroke="#4A7FC1"/>
+<rect x="175" y="668" width="18" height="18" rx="3" fill="#BFE6CC" stroke="#3F9B5C"/>
+<text x="230" y="240" opacity="0"/>
+
+<rect x="350" y="672" width="300" height="32" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="500" y="692" text-anchor="middle" font-size="11" font-weight="700" fill="#4B2E83">Learnable Gate Generation</text>
+<path d="M500,704 L500,718" class="flowP"/>
+
+<rect x="350" y="718" width="300" height="32" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="500" y="738" text-anchor="middle" font-size="11" font-weight="700" fill="#4B2E83">Softmax Normalization</text>
+<path d="M500,750 L500,764" class="flowP"/>
+
+<rect x="350" y="764" width="300" height="32" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="500" y="784" text-anchor="middle" font-size="11" font-weight="700" fill="#4B2E83">Weighted Feature Aggregation</text>
+
+<path d="M500,796 L500,824" class="flow"/>
+<rect x="415" y="824" width="170" height="27" rx="8" class="box" fill="url(#gradOrange)" stroke="#E08E3E" filter="url(#softShadow)"/>
+<text x="500" y="842" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A431A">Fused Feature Map</text>
+<path d="M500,851 L500,860" class="flow"/>
+
+<!-- ============ TRANSFORMER ENCODER ============ -->
+<rect x="60" y="860" width="880" height="352" rx="16" fill="url(#gradGray)" stroke="#8A63C9" stroke-width="1.5" filter="url(#softShadow)"/>
+<text x="80" y="883" font-size="15" font-weight="700" fill="#4B2E83">Transformer Encoder</text>
+
+<rect x="330" y="892" width="200" height="32" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<g transform="translate(340,897)">
+  <rect x="0" y="0" width="5" height="5" fill="#8A63C9"/><rect x="7" y="0" width="5" height="5" fill="#8A63C9"/><rect x="14" y="0" width="5" height="5" fill="#8A63C9"/>
+  <rect x="0" y="7" width="5" height="5" fill="#8A63C9"/><rect x="7" y="7" width="5" height="5" fill="#8A63C9"/><rect x="14" y="7" width="5" height="5" fill="#8A63C9"/>
+  <rect x="0" y="14" width="5" height="5" fill="#8A63C9"/><rect x="7" y="14" width="5" height="5" fill="#8A63C9"/><rect x="14" y="14" width="5" height="5" fill="#8A63C9"/>
+</g>
+<text x="440" y="912" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4B2E83">Patch / Token Embedding</text>
+
+<rect x="700" y="892" width="150" height="32" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="775" y="912" text-anchor="middle" font-size="9.5" font-weight="700" fill="#4B2E83">Positional Encoding</text>
+
+<circle cx="500" cy="946" r="11" fill="#FFFFFF" stroke="#8A63C9" stroke-width="1.6"/>
+<text x="500" y="950" text-anchor="middle" font-size="13" font-weight="700" fill="#6B46A8">⊕</text>
+<path d="M440,924 L440,935 Q440,946 489,946" class="flowP"/>
+<path d="M775,924 L775,946 Q775,946 511,946" class="flowP"/>
+<path d="M500,957 L500,967" class="flowP"/>
+
+<rect x="150" y="967" width="700" height="210" rx="14" fill="none" stroke="#8A63C9" stroke-dasharray="5,4" stroke-width="1.5"/>
+<text x="815" y="983" text-anchor="end" font-size="11" font-weight="700" fill="#6B46A8">× N</text>
+
+<rect x="360" y="980" width="280" height="24" rx="6" fill="url(#gradPurple)" stroke="#8A63C9"/>
+<text x="500" y="996" text-anchor="middle" font-size="9.5" font-weight="600" fill="#4B2E83">Layer Norm</text>
+<path d="M500,1004 L500,1012" class="flowP"/>
+
+<rect x="330" y="1012" width="340" height="42" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<g transform="translate(340,1020)">
+  <rect x="0" y="0" width="4" height="20" fill="#B79AE0"/><rect x="6" y="4" width="4" height="16" fill="#A382D6"/>
+  <rect x="12" y="0" width="4" height="20" fill="#8A63C9"/><rect x="18" y="6" width="4" height="14" fill="#B79AE0"/>
+</g>
+<text x="510" y="1029" text-anchor="middle" font-size="11" font-weight="700" fill="#4B2E83">Multi-Head Self-Attention</text>
+<text x="510" y="1042" text-anchor="middle" font-size="7.5" fill="#6B46A8">(h parallel attention heads)</text>
+
+<!-- residual 1 -->
+<path d="M360,974 L240,974 L240,1064 L489,1064" class="flowP" fill="none"/>
+<path d="M500,1054 L500,1063" class="flowP"/>
+<circle cx="500" cy="1064" r="10" fill="#FFFFFF" stroke="#8A63C9" stroke-width="1.6"/>
+<text x="500" y="1068" text-anchor="middle" font-size="12" font-weight="700" fill="#6B46A8">+</text>
+<path d="M500,1074 L500,1082" class="flowP"/>
+
+<rect x="360" y="1082" width="280" height="24" rx="6" fill="url(#gradPurple)" stroke="#8A63C9"/>
+<text x="500" y="1098" text-anchor="middle" font-size="9.5" font-weight="600" fill="#4B2E83">Layer Norm</text>
+<path d="M500,1106 L500,1114" class="flowP"/>
+
+<rect x="330" y="1114" width="340" height="42" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="510" y="1132" text-anchor="middle" font-size="11" font-weight="700" fill="#4B2E83">Feed Forward Network</text>
+<text x="510" y="1145" text-anchor="middle" font-size="7.5" fill="#6B46A8">(MLP, GELU activation)</text>
+
+<!-- residual 2 -->
+<path d="M670,1108 L780,1108 L780,1163 L511,1163" class="flowP" fill="none"/>
+<path d="M500,1156 L500,1163" class="flowP"/>
+<circle cx="500" cy="1163" r="10" fill="#FFFFFF" stroke="#8A63C9" stroke-width="1.6"/>
+<text x="500" y="1167" text-anchor="middle" font-size="12" font-weight="700" fill="#6B46A8">+</text>
+
+<path d="M500,1177 L500,1195" class="flowP"/>
+<rect x="380" y="1195" width="240" height="30" rx="8" class="box" fill="url(#gradPurple)" stroke="#8A63C9" filter="url(#softShadow)"/>
+<text x="500" y="1215" text-anchor="middle" font-size="10.5" font-weight="700" fill="#4B2E83">Global Average Pooling</text>
+
+<path d="M500,1225 L500,1240" class="flow"/>
+<text x="500" y="1236" text-anchor="middle" font-size="9.5" font-weight="600" fill="#374151"></text>
+
+<!-- ============ FEATURE VECTOR LABEL ============ -->
+<rect x="415" y="1225" width="170" height="26" rx="8" fill="#FFFFFF" stroke="#6B7280" stroke-width="1.3"/>
+<text x="500" y="1242" text-anchor="middle" font-size="10.5" font-weight="700" fill="#1F2937">Feature Vector</text>
+<path d="M500,1251 L500,1263" class="flow"/>
+
+<!-- ============ GENETIC ALGORITHM ============ -->
+<rect x="60" y="1263" width="880" height="172" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="80" y="1286" class="sectionLabel" font-size="14.5">Genetic Algorithm — Feature Selection</text>
+
+<!-- chromosome population icon -->
+<g>
+  <text x="90" y="1305" font-size="8.5" fill="#1D4D45" font-weight="600">Chromosome Population</text>
+  <g transform="translate(90,1310)">
+    <rect x="0" y="0" width="13" height="13" fill="#BFE6CC" stroke="#3F9B5C"/>
+    <rect x="14" y="0" width="13" height="13" fill="#F8D2A0" stroke="#E08E3E"/>
+    <rect x="28" y="0" width="13" height="13" fill="#BEDAF7" stroke="#4A7FC1"/>
+    <rect x="42" y="0" width="13" height="13" fill="#D6C2F0" stroke="#8A63C9"/>
+    <rect x="56" y="0" width="13" height="13" fill="#BFE6CC" stroke="#3F9B5C"/>
+    <rect x="70" y="0" width="13" height="13" fill="#BEDAF7" stroke="#4A7FC1"/>
+    <rect x="84" y="0" width="13" height="13" fill="#F8D2A0" stroke="#E08E3E"/>
+    <rect x="98" y="0" width="13" height="13" fill="#D6C2F0" stroke="#8A63C9"/>
+  </g>
+</g>
+<path d="M115,1330 C130,1345 150,1330 170,1328" class="flowSmall" stroke="#1D4D45"/>
+
+<!-- pentagon GA loop -->
+<g font-size="7.6" text-anchor="middle" font-weight="700" fill="#1E5B34">
+  <circle cx="330" cy="1300" r="26" fill="url(#gradGreen)" stroke="#3F9B5C" stroke-width="1.4" filter="url(#softShadow)"/>
+  <text x="330" y="1297">Population</text><text x="330" y="1307">Init.</text>
+
+  <circle cx="389" cy="1321" r="26" fill="url(#gradGreen)" stroke="#3F9B5C" stroke-width="1.4" filter="url(#softShadow)"/>
+  <text x="389" y="1318">Fitness</text><text x="389" y="1328">Evaluation</text>
+
+  <circle cx="366" cy="1390" r="26" fill="url(#gradGreen)" stroke="#3F9B5C" stroke-width="1.4" filter="url(#softShadow)"/>
+  <text x="366" y="1394">Selection</text>
+
+  <circle cx="294" cy="1390" r="26" fill="url(#gradGreen)" stroke="#3F9B5C" stroke-width="1.4" filter="url(#softShadow)"/>
+  <text x="294" y="1394">Crossover</text>
+
+  <circle cx="271" cy="1321" r="26" fill="url(#gradGreen)" stroke="#3F9B5C" stroke-width="1.4" filter="url(#softShadow)"/>
+  <text x="271" y="1324">Mutation</text>
+</g>
+<g class="flowSmall" stroke="#1E5B34" stroke-width="1.3" fill="none">
+  <path d="M349,1287 C 365,1295 375,1303 384,1310"/>
+  <path d="M385,1345 C 380,1360 375,1370 372,1376"/>
+  <path d="M341,1394 C 325,1396 305,1396 289,1394"/>
+  <path d="M281,1367 C 277,1355 274,1345 272,1335"/>
+  <path d="M289,1305 C 300,1298 310,1295 315,1293"/>
+</g>
+<text x="330" y="1420" text-anchor="middle" font-size="7.5" fill="#1D4D45" font-style="italic">(iterated until convergence criterion is met)</text>
+
+<path d="M415,1315 C 460,1305 500,1300 555,1300" class="flow"/>
+<rect x="560" y="1275" width="160" height="50" rx="10" class="box" fill="url(#gradOrange)" stroke="#E08E3E" filter="url(#softShadow)"/>
+<text x="640" y="1296" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A431A">Selected Optimal</text>
+<text x="640" y="1310" text-anchor="middle" font-size="10.5" font-weight="700" fill="#7A431A">Features</text>
+
+<path d="M640,1325 C 640,1360 550,1400 505,1440" class="flow"/>
+
+<!-- ============ CLASSIFIER ============ -->
+<rect x="345" y="1440" width="310" height="46" rx="10" class="box" fill="url(#gradBlue)" stroke="#4A7FC1" filter="url(#softShadow)"/>
+<g transform="translate(358,1449)" stroke="#4A7FC1" stroke-width="1.4" fill="none">
+  <path d="M0,26 C6,26 6,2 14,2 C22,2 22,26 28,26"/>
+  <line x1="0" y1="14" x2="28" y2="14" stroke="#9CB9DD" stroke-width="0.8"/>
+</g>
+<text x="510" y="1461" text-anchor="middle" font-size="12" font-weight="700" fill="#1F3A5F">Logistic Regression</text>
+<text x="510" y="1476" text-anchor="middle" font-size="10" fill="#3B5C8A">Machine Learning Classifier</text>
+
+<path d="M500,1486 L500,1512" class="flow"/>
+
+<!-- ============ OUTPUT ============ -->
+<rect x="60" y="1512" width="880" height="140" rx="16" fill="url(#gradGray)" stroke="#9CA3AF" stroke-dasharray="6,4" filter="url(#softShadow)"/>
+<text x="80" y="1534" class="sectionLabel" font-size="14.5">Output: Land Use Classification</text>
+
+<!-- Row 1 -->
+<!-- Forest -->
+<g>
+  <rect x="85" y="1545" width="150" height="50" rx="8" fill="#E6F4E9" stroke="#4C9A5F"/>
+  <polygon points="105,1580 113,1560 121,1580" fill="#3F8F52"/><rect x="111" y="1578" width="4" height="6" fill="#7A5230"/>
+  <polygon points="121,1582 130,1558 139,1582" fill="#2E7A42"/><rect x="128" y="1580" width="4" height="6" fill="#7A5230"/>
+  <text x="185" y="1573" text-anchor="middle" font-size="10" font-weight="700" fill="#2E5C36">Forest</text>
+</g>
+<!-- River -->
+<g>
+  <rect x="255" y="1545" width="150" height="50" rx="8" fill="#E4F0FB" stroke="#3F79BE"/>
+  <path d="M267,1568 Q275,1560 283,1568 T299,1568" stroke="#3F79BE" stroke-width="2.2" fill="none"/>
+  <path d="M267,1578 Q275,1570 283,1578 T299,1578" stroke="#6FA3D8" stroke-width="2.2" fill="none"/>
+  <text x="350" y="1573" text-anchor="middle" font-size="10" font-weight="700" fill="#1F4E82">River</text>
+</g>
+<!-- Residential -->
+<g>
+  <rect x="425" y="1545" width="150" height="50" rx="8" fill="#F3EFE8" stroke="#A9825A"/>
+  <rect x="440" y="1572" width="18" height="14" fill="#D9B48A" stroke="#8A6742"/><polygon points="437,1572 449,1560 461,1572" fill="#B15C4A"/>
+  <rect x="462" y="1576" width="14" height="10" fill="#E4CBAA" stroke="#8A6742"/><polygon points="460,1576 469,1568 478,1576" fill="#9A4B3B"/>
+  <text x="525" y="1573" text-anchor="middle" font-size="10" font-weight="700" fill="#6B4A2A">Residential</text>
+</g>
+<!-- Industrial -->
+<g>
+  <rect x="595" y="1545" width="150" height="50" rx="8" fill="#EDEFF2" stroke="#6B7280"/>
+  <rect x="612" y="1568" width="24" height="18" fill="#9CA3AF" stroke="#4B5563"/>
+  <rect x="618" y="1558" width="5" height="12" fill="#9CA3AF" stroke="#4B5563"/>
+  <path d="M620,1558 Q617,1552 621,1548" stroke="#B0B7C0" stroke-width="1.6" fill="none"/>
+  <text x="690" y="1573" text-anchor="middle" font-size="10" font-weight="700" fill="#374151">Industrial</text>
+</g>
+<!-- Highway -->
+<g>
+  <rect x="765" y="1545" width="150" height="50" rx="8" fill="#EEEFF0" stroke="#5B6068"/>
+  <rect x="782" y="1560" width="40" height="20" fill="#6B7280" transform="rotate(-8 802 1570)"/>
+  <line x1="784" y1="1570" x2="820" y2="1568" stroke="#FFFFFF" stroke-width="1.3" stroke-dasharray="4,3"/>
+  <text x="855" y="1573" text-anchor="middle" font-size="10" font-weight="700" fill="#3A3E44">Highway</text>
+</g>
+
+<!-- Row 2 -->
+<!-- Pasture -->
+<g>
+  <rect x="85" y="1602" width="150" height="46" rx="8" fill="#EBF6E4" stroke="#6AA05A"/>
+  <path d="M100,1636 Q104,1622 108,1636" stroke="#5B9C4A" stroke-width="2" fill="none"/>
+  <path d="M108,1636 Q113,1620 118,1636" stroke="#5B9C4A" stroke-width="2" fill="none"/>
+  <path d="M118,1636 Q123,1624 128,1636" stroke="#78B565" stroke-width="2" fill="none"/>
+  <text x="185" y="1629" text-anchor="middle" font-size="10" font-weight="700" fill="#3E6E33">Pasture</text>
+</g>
+<!-- Annual Crop -->
+<g>
+  <rect x="255" y="1602" width="150" height="46" rx="8" fill="#F6F3DE" stroke="#B9A23F"/>
+  <line x1="270" y1="1618" x2="270" y2="1636" stroke="#A98F2E" stroke-width="1.6"/>
+  <line x1="278" y1="1618" x2="278" y2="1636" stroke="#C4AE4C" stroke-width="1.6"/>
+  <line x1="286" y1="1618" x2="286" y2="1636" stroke="#A98F2E" stroke-width="1.6"/>
+  <line x1="294" y1="1618" x2="294" y2="1636" stroke="#C4AE4C" stroke-width="1.6"/>
+  <text x="350" y="1629" text-anchor="middle" font-size="9.3" font-weight="700" fill="#7A672A">Annual Crop</text>
+</g>
+<!-- Permanent Crop -->
+<g>
+  <rect x="425" y="1602" width="150" height="46" rx="8" fill="#E7F3E2" stroke="#5F9950"/>
+  <circle cx="443" cy="1628" r="7" fill="#6FAE5C" stroke="#3E6E33"/>
+  <circle cx="456" cy="1622" r="7" fill="#7FBB6C" stroke="#3E6E33"/>
+  <circle cx="456" cy="1636" r="7" fill="#7FBB6C" stroke="#3E6E33"/>
+  <text x="520" y="1629" text-anchor="middle" font-size="9" font-weight="700" fill="#3E6E33">Permanent Crop</text>
+</g>
+<!-- Sea/Lake -->
+<g>
+  <rect x="595" y="1602" width="150" height="46" rx="8" fill="#DEEDFA" stroke="#2E6CA8"/>
+  <path d="M608,1626 Q614,1618 620,1626 T632,1626 T644,1626" stroke="#2E6CA8" stroke-width="2.2" fill="none"/>
+  <path d="M608,1636 Q614,1628 620,1636 T632,1636 T644,1636" stroke="#5A93C7" stroke-width="2.2" fill="none"/>
+  <text x="672" y="1629" text-anchor="middle" font-size="9.3" font-weight="700" fill="#1F4E82">Sea / Lake</text>
+</g>
+<!-- Herbaceous Vegetation -->
+<g>
+  <rect x="765" y="1602" width="150" height="46" rx="8" fill="#EAF5E6" stroke="#5C9A4E"/>
+  <path d="M782,1636 C782,1622 792,1614 796,1636 C796,1614 806,1622 806,1636" fill="#6FAE5C" stroke="#3E6E33" stroke-width="1"/>
+  <text x="855" y="1629" text-anchor="middle" font-size="8" font-weight="700" fill="#3E6E33">Herbaceous Veg.</text>
+</g>
+
+<text x="500" y="1665" text-anchor="middle" class="caption" font-size="10.5">Fig. 1. Overview of the proposed multi-level feature fusion and transformer-based framework for land-use classification.</text>
+
+</svg>
