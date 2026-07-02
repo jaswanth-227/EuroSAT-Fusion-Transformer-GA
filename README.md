@@ -1,64 +1,74 @@
-# Multi-Scale Feature Fusion and Transformer Encoding for EuroSAT Land Use Classification
+# 🌍 Multi-Scale Feature Fusion & Transformer Encoding for EuroSAT Land Use Classification
 
-📄 Conference Paper:  
-[View the Full Paper](EuroSAT_Conference.pdf)
+<p align="center">
+  <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=28&duration=3500&pause=1000&color=00C4FF&center=true&vCenter=true&width=900&lines=EuroSAT+Land+Use+Classification;Multi-Scale+Feature+Fusion;Transformer+Encoding;Genetic+Algorithm+Feature+Selection;ICAIATI+2025+Best+Paper+Award" />
+</p>
 
-📂 Dataset:  
-https://www.kaggle.com/datasets/raoofnaushad/eurosat-sentinel2-dataset
+<p align="center">
 
----
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-DeepLearning-red?style=for-the-badge&logo=pytorch)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-orange?style=for-the-badge&logo=scikitlearn)
+![Research](https://img.shields.io/badge/Research-ICAIATI%202025-success?style=for-the-badge)
+![Accuracy](https://img.shields.io/badge/Accuracy-97.36%25-brightgreen?style=for-the-badge)
 
-## Overview
-
-This repository contains the implementation of our research work presented in the ICAIATI Conference.
-
-The project focuses on **Land Use and Land Cover (LULC) classification using satellite imagery from the EuroSAT dataset**.
-
-The proposed system introduces a **hybrid deep learning framework** that integrates:
-
-- Convolutional Neural Networks (CNNs)
-- Attention Mechanisms
-- Transformer-based Contextual Modeling
-- Genetic Algorithm-based Feature Selection
-
-This hybrid architecture improves classification performance and achieves high accuracy in satellite image classification.
+</p>
 
 ---
 
-## Problem Statement
+# 📖 Overview
 
-Land Use and Land Cover (LULC) classification from satellite imagery is essential for many real-world applications such as:
+This repository contains the implementation of our **ICAIATI 2025 Best Paper Award-winning research**, proposing a hybrid deep learning framework for **Land Use and Land Cover (LULC) Classification** using the EuroSAT satellite imagery dataset.
 
-- Environmental Monitoring
-- Urban Planning
-- Agricultural Assessment
-- Climate Analysis
+The framework combines:
 
-However, accurate classification remains challenging due to:
+- 🧠 DenseNet-121 Multi-scale Feature Extraction
+- 🎯 Channel & Spatial Attention
+- 🔀 Adaptive Gated Feature Fusion
+- 🤖 Transformer Encoder
+- 🧬 Genetic Algorithm Feature Selection
+- 📈 Machine Learning Classifiers
 
-- Spectral variability in satellite imagery
-- Visual similarity between land cover classes
-- High-dimensional feature representations
-- Complex spatial patterns in remote sensing data
-
-To address these challenges, this project proposes a **multi-scale hybrid architecture combining CNNs, attention modules, transformers, and evolutionary feature optimization.**
+The proposed model achieved **97.36% classification accuracy**, outperforming several state-of-the-art CNN architectures.
 
 ---
 
-## Dataset
+# 🏆 Achievements
 
-This project uses the **EuroSAT dataset**, derived from **Sentinel-2 satellite imagery**.
+- 🥇 **Best Paper Award – ICAIATI 2025**
+- 📄 Research accepted for publication in **Taylor & Francis**
+- 🚀 Achieved **97.36% Test Accuracy** on the EuroSAT benchmark dataset
+- 🌍 Developed a hybrid CNN–Transformer framework for remote sensing image classification
 
-Dataset Link:  
-https://www.kaggle.com/datasets/raoofnaushad/eurosat-sentinel2-dataset
+---
 
-### Dataset Characteristics
+# 🎯 Applications
 
-- Total Images: **27,000**
-- Image Resolution: **64 × 64**
-- Number of Classes: **10**
+This work can be applied to:
 
-### Land Use Classes
+- 🌾 Agricultural Monitoring
+- 🏙 Urban Planning
+- 🌍 Land Use Mapping
+- 🌳 Environmental Monitoring
+- 🚨 Disaster Management
+- 🛰 Remote Sensing Analytics
+
+---
+
+# 📂 Dataset
+
+**Dataset:** EuroSAT (Sentinel-2 Satellite Imagery)
+
+📊 **Dataset Statistics**
+
+| Attribute | Value |
+|-----------|-------|
+| Images | 27,000 |
+| Classes | 10 |
+| Resolution | 64 × 64 |
+| Source | Sentinel-2 RGB |
+
+### Classes
 
 - AnnualCrop
 - Forest
@@ -69,89 +79,197 @@ https://www.kaggle.com/datasets/raoofnaushad/eurosat-sentinel2-dataset
 - PermanentCrop
 - Residential
 - River
-- SeaLake
+- Sea/Lake
 
 ---
 
-## Proposed Methodology
+# 🏗 Proposed Architecture
 
-The proposed framework combines **deep learning and optimization techniques** to improve classification performance.
+The complete processing pipeline consists of:
 
-### Main Components
-
-- Multi-scale feature extraction using **DenseNet-121**
-- Channel and Spatial Attention mechanisms for feature refinement
-- Adaptive Gated Fusion to combine multi-level features
-- Transformer Encoder to capture long-range spatial dependencies
-- Genetic Algorithm for feature selection and dimensionality reduction
-- Final classification using machine learning models such as:
-  - Logistic Regression
-  - Support Vector Machine (SVM)
-  - Random Forest
-
----
-## Model Architecture
-
-The following diagram illustrates the overall architecture of the proposed hybrid framework integrating DenseNet feature extraction, attention-based fusion, transformer encoding, and genetic algorithm feature selection.
-
-![Model Architecture](ARCHITECTURE.pdf)
-
-## Pipeline Overview
-
-| Stage | Description |
-|------|-------------|
-| Input | Satellite image from EuroSAT dataset |
-| Feature Extraction | DenseNet-121 extracts multi-scale features |
-| Attention | Channel and spatial attention refine features |
-| Feature Alignment | 1×1 convolution aligns feature maps |
-| Fusion | Adaptive gated fusion combines features |
-| Context Modeling | Transformer encoder captures global dependencies |
-| Pooling | Global average pooling reduces dimensionality |
-| Feature Optimization | Genetic algorithm selects optimal features |
-| Classification | Logistic Regression / SVM / Random Forest |
-
----
-
-## Experimental Setup
-
-Dataset split used for experiments:
-
-- Training Set — **70%**
-- Validation Set — **15%**
-- Test Set — **15%**
-
-### Backbone Models Evaluated
-
-- ResNet-50
-- DenseNet-121
-- EfficientNet-B0
-- MobileNet-V2
-- AlexNet
+```text
+Satellite Image
+        │
+        ▼
+DenseNet-121
+Multi-scale Features
+        │
+        ▼
+Channel Attention
+        │
+        ▼
+Spatial Attention
+        │
+        ▼
+Feature Alignment
+        │
+        ▼
+Adaptive Gated Fusion
+        │
+        ▼
+Transformer Encoder
+        │
+        ▼
+Global Average Pooling
+        │
+        ▼
+Genetic Algorithm
+Feature Selection
+        │
+        ▼
+Machine Learning Classifier
+        │
+        ▼
+Land Use Prediction
+```
 
 ---
 
-## Results
+# 🧠 Model Components
 
-Performance comparison of models on the EuroSAT dataset:
+| Module | Purpose |
+|---------|---------|
+| DenseNet-121 | Multi-scale feature extraction |
+| Channel Attention | Channel refinement |
+| Spatial Attention | Spatial feature enhancement |
+| Adaptive Gated Fusion | Multi-level feature fusion |
+| Transformer Encoder | Global contextual learning |
+| Genetic Algorithm | Feature selection |
+| Logistic Regression | Final classification |
 
-| Model | Accuracy |
-|------|------|
+---
+
+# ⚙ Experimental Setup
+
+| Parameter | Value |
+|-----------|-------|
+| Training | 70% |
+| Validation | 15% |
+| Testing | 15% |
+| Optimizer | Adam |
+| Dataset | EuroSAT |
+| Image Size | 64×64 |
+
+---
+
+# 📊 Performance Comparison
+
+| Model | Test Accuracy |
+|---------|-------------:|
+| AlexNet | 91.95% |
+| MobileNetV2 | 93.88% |
+| EfficientNet-B0 | 95.73% |
 | ResNet-50 | 95.90% |
 | DenseNet-121 | 96.77% |
-| EfficientNet-B0 | 95.73% |
-| MobileNet-V2 | 93.88% |
-| AlexNet | 91.95% |
-| ⭐ Proposed Hybrid Model | **97.36%** |
-
-The proposed **Fusion + Transformer + Genetic Algorithm framework** achieves the highest classification accuracy by effectively combining multi-scale feature extraction, attention-based refinement, and contextual modeling.
+| ⭐ Proposed Model | **97.36%** |
 
 ---
 
-## Key Contributions
+# 📈 Ablation Study
 
-- Multi-scale feature extraction using DenseNet architecture
-- Attention-based refinement for improved spatial–spectral representation
-- Transformer-based contextual feature modeling
-- Genetic Algorithm for optimal feature selection
-- Hybrid framework achieving **97.36% accuracy** on the EuroSAT dataset
+| Configuration | Accuracy |
+|---------------|----------|
+| DenseNet-121 | 96.77% |
+| DenseNet + Transformer | 96.92% |
+| DenseNet + Fusion + Transformer | 97.10% |
+| ⭐ Full Model + GA | **97.36%** |
 
+---
+
+# 📂 Repository Structure
+
+```text
+EuroSAT-LULC-Classification
+│
+├── dataset/
+├── models/
+├── notebooks/
+├── results/
+├── images/
+├── architecture/
+├── EuroSAT_Conference.pdf
+├── requirements.txt
+└── README.md
+```
+
+---
+
+# 🚀 Installation
+
+```bash
+git clone https://github.com/yourusername/EuroSAT-LULC-Classification.git
+
+cd EuroSAT-LULC-Classification
+
+pip install -r requirements.txt
+```
+
+---
+
+# ▶ Usage
+
+Run the training pipeline
+
+```bash
+python train.py
+```
+
+Evaluate the model
+
+```bash
+python test.py
+```
+
+---
+
+# 📄 Conference Paper
+
+📥 **Read the Full Paper**
+
+```
+EuroSAT_Conference.pdf
+```
+
+---
+
+# 🔬 Future Work
+
+- Vision Transformers (ViT)
+- Swin Transformer
+- Multi-Spectral EuroSAT
+- Self-Supervised Learning
+- Explainable AI (Grad-CAM)
+- Real-Time Remote Sensing Pipeline
+
+---
+
+# 👨‍💻 Authors
+
+**Jaswanth Yadurla**
+
+B.Tech – Artificial Intelligence & Machine Learning
+
+📧 yadurlajaswanth@gmail.com
+
+---
+
+# 📚 Citation
+
+If you use this work, please cite our paper.
+
+```bibtex
+@inproceedings{jaswanth2025eurosat,
+  title={Multi-Scale Feature Fusion and Transformer Encoding for EuroSAT Land Use Classification},
+  author={Yadurla, Jaswanth and others},
+  booktitle={ICAIATI 2025},
+  year={2025}
+}
+```
+
+---
+
+# ⭐ Support
+
+If you found this repository useful, please consider giving it a ⭐.
+
+**Built with ❤️ for Remote Sensing, Computer Vision, and Artificial Intelligence.**
