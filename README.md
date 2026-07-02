@@ -239,18 +239,6 @@ B.Tech — Artificial Intelligence & Machine Learning
 
 ---
 
-# 📚 Citation
-
-```bibtex
-@inproceedings{yadurla2025mlft,
-  title={Multi-Scale Feature Fusion and Transformer Encoding for Enhanced Land Use Classification on EuroSAT},
-  author={Yadurla, Jaswanth and others},
-  booktitle={International Conference on Artificial Intelligence Applications and Technological Innovations (ICAIATI)},
-  year={2025}
-}
-```
-
----
 
 # 🙏 Acknowledgements
 
