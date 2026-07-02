@@ -166,25 +166,22 @@ Land Use Prediction
 
 # 📊 Performance Comparison
 
-| Model | Test Accuracy |
-|------|-------------:|
-| AlexNet | 91.95% |
-| MobileNetV2 | 93.88% |
-| EfficientNet-B0 | 95.73% |
-| ResNet50 | 95.90% |
-| DenseNet121 | 96.77% |
-| ⭐ Proposed MLFT | **97.36%** |
+The proposed **MLFT (Multi-Level Feature Fusion Transformer)** framework was compared against several state-of-the-art CNN backbones on the EuroSAT dataset using a **70/15/15 train–validation–test split**.
 
----
+| CNN Backbone | Classifier | Validation Accuracy (%) | Test Accuracy (%) |
+|--------------|------------|------------------------:|------------------:|
+| ResNet-50 | Logistic Regression | 96.17 | 95.90 |
+| DenseNet-121 | Logistic Regression | 96.89 | 96.77 |
+| EfficientNet-B0 | Logistic Regression | 95.51 | 95.73 |
+| MobileNet-V2 | SVM | 93.29 | 93.88 |
+| AlexNet | SVM | 91.88 | 91.95 |
+| ⭐ **Fusion + Transformer + GA + LR (Proposed)** | Logistic Regression | **97.41** | **97.36** |
 
-# 📈 Ablation Study
+### Key Findings
 
-| Configuration | Test Accuracy |
-|---------------|-------------:|
-| DenseNet-121 | 96.77% |
-| DenseNet + Transformer | 96.92% |
-| DenseNet + Fusion + Transformer | 97.10% |
-| ⭐ MLFT + Genetic Algorithm | **97.36%** |
+- 🚀 The proposed **Fusion + Transformer + GA + LR** framework achieved the **highest validation accuracy (97.41%)**.
+- 🏆 It also obtained the **best test accuracy (97.36%)**, outperforming all baseline CNN models.
+- 🎯 Multi-level feature fusion, transformer-based contextual learning, and genetic algorithm-based feature selection significantly improved classification performance.
 
 ---
 
