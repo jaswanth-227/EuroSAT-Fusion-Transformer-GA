@@ -94,7 +94,7 @@ The proposed framework achieved a **97.36% test accuracy**, outperforming severa
 The proposed **MLFT** architecture integrates DenseNet feature extraction, attention-based refinement, transformer encoding, and genetic algorithm optimization.
 
 <p align="center">
-<img src="architecture_diagram.svg" width="1000">
+<img src="mlft_architecture.png" width="1000">
 </p>
 
 <p align="center">
