@@ -221,7 +221,7 @@ OIML_CT_1.ipynb
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Authors
 
 **Yadurla Jaswanth**
 
