@@ -223,13 +223,22 @@ OIML_CT_1.ipynb
 
 # 👨‍💻 Author
 
-**Jaswanth Yadurla**
+**Yadurla Jaswanth**
 
 B.Tech — Artificial Intelligence & Machine Learning
 
 📧 yadurlajaswanth@gmail.com
 
 🔗 LinkedIn: https://www.linkedin.com/in/jaswanth-yadurla-634290284/
+
+**Teegala Charitha Sai Reddy**
+
+B.Tech — Artificial Intelligence & Machine Learning
+
+📧 charithateegala06@gmail.com
+
+🔗 LinkedIn: https://www.linkedin.com/in/charitha-teegala-8198352b4/
+
 
 ---
 
